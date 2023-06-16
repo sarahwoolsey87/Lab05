@@ -35,10 +35,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-let Result= a * b;
-return Result;
+let result= a * b;
+let string= "The product of" + a + "and" + b + result + "";
+return [result, string]
 }
-console.log(multiply(5,9))
+console.log(multiply(5,9));
 
 // Here is the test for multiply(); uncomment it to run it
 // testMultiply(5,9);
@@ -58,8 +59,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+let sumResult = sum(a, b, c);
+let sumString = "The sum of " + a + " and " + b + " and " + c + " sum to " + sumResult + ".";
+let productResult = multiply(a, b, c);
+let productString = "The product of " + a + " and " + b + " and " + c + " is " + result + ".";
+return [sumResult, productResult, sumString, productString];
 }
+
+console.log(sumAndMultiply(4, 7, 5));
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 // testSumAndMultiply(4,7,5);
